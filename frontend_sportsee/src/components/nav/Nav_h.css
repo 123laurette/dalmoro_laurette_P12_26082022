@@ -1,0 +1,24 @@
+.Horizon{
+    height:91px;
+    width: 100%;
+    background-color: var(--noir) ;
+}
+.Horizon header {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.Horizon img {
+    width: 178px;
+    height: 60.93px;
+    margin-left: 20px;
+}
+nav  {
+    display: flex;
+    justify-content: space-between;
+    color: var(--blanc);
+    font-size: 24px;
+    width: 70%;
+    margin-right: 70px;
+}
