@@ -1,4 +1,4 @@
-/*import dataUser from "./../data/data"
+import dataUser from "./../data/data"
 
 function getDataUser() {
     return dataUser.map((user) => {
@@ -19,6 +19,6 @@ function getIdUser(id) {
 export {
     getDataUser,
     getIdUser
-}*/
+}
 
 

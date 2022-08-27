@@ -5,7 +5,7 @@ import NavH from "./components/nav/Nav_h"
 import NavV from "./components/nav/Nav_v"
 import Dashboard from "./pages/Dashboard"
 import reportWebVitals from './reportWebVitals';
-//import Connexion from './pages/PageConnexion';
+//import PageConnexion from './pages/PageConnexion';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,5 +20,8 @@ root.render(
 
 
 reportWebVitals();
+
+
+//      <PageConnexion />
 
 //<Route path="/" element={<Connexion/>} />

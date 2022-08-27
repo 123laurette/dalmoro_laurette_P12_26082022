@@ -1,14 +1,18 @@
-/*import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
+import {getDataUser} from "./../../services/DataMock"
 
 
-function CarteConnexion(id) {
+function LienConnexion() {
     return (
-        <Link to={`/user/${id}`} >
-        </Link>
-
+        <div>
+        {getDataUser().map((user) => (
+            <Link to={`/PageConnexion/${user.id}`} key={user.id}>
+            </Link> 
+        ))}
+        </div>
     )
 }
 
-export default CarteConnexion;*/
+export default LienConnexion;
 

@@ -4,6 +4,12 @@ import Calories from "./../assets/calories-icon.png"
 import Proteines from "./../assets/proteines-icon.png"
 import Glucides from "./../assets/glucides-icon.png"
 import Lipides from "./../assets/lipides-icon.png"
+import Poids from "./../components/graphiques/Poids"
+import Objectifs from "./../components/graphiques/Objectifs"
+import Radar from "./../components/graphiques/Radar"
+import Kpi from "./../components/graphiques/Kpi"
+
+
 //import { useParams } from "react-router-dom"
 //import { getIdUser } from "./../services/DataMock"
 
@@ -26,17 +32,20 @@ function Dashboard() {
             <div className="graphiques">
                 <section className="HorizonGauche">
                 <div className="Poids">
-
+                    <Poids/>
                 </div>
 
                 <section className="carre">
                     <div className="Objectifs">
+                    <Objectifs/>
 
                     </div>
                     <div className="Radar">
+                    <Radar/>
 
                     </div>
                     <div className="Kpi">
+                    <Kpi/>
 
                     </div>
                 </section>
@@ -45,15 +54,31 @@ function Dashboard() {
 
                     <div className="Calories">
                         <img src={Calories} alt="" />
+                        <div className="Infos">
+                            <h3>1.930kCal</h3>
+                            <p>Calories</p>
+                        </div>
                     </div>
                     <div className="Proteines">
                         <img src={Proteines} alt="" />
+                        <div className="Infos">
+                            <h3>155g</h3>
+                            <p>Proteines</p>
+                        </div>
                     </div>
                     <div className="Glucides">
                         <img src={Glucides} alt="" />
+                        <div className="Infos">
+                            <h3>290g</h3>
+                            <p>Glucides</p>
+                        </div>
                     </div>
                     <div className="Lipides">
                         <img src={Lipides} alt="" />
+                        <div className="Infos">
+                            <h3>50g</h3>
+                            <p>Lipides</p>
+                        </div>
                     </div>
                 </section>
             </div>
