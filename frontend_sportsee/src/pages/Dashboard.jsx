@@ -1,18 +1,28 @@
 import "./../style/Dashboard.css"
-import Bonjour from "./../components/dashboard/Header"
 import React from 'react';
 import Calories from "./../assets/calories-icon.png"
 import Proteines from "./../assets/proteines-icon.png"
 import Glucides from "./../assets/glucides-icon.png"
 import Lipides from "./../assets/lipides-icon.png"
-
+//import { useParams } from "react-router-dom"
+//import { getIdUser } from "./../services/DataMock"
 
 
 
 function Dashboard() {
+    //const {DataUserId} = useParams ()
+    //const userId = getIdUser(DataUserId)
     return (
         <div className="pageDashboard">
-            <Bonjour />
+
+            <div className="Bonjour">
+                <h1>Bonjour
+                    <span> Thomas
+                    </span> 
+                </h1>
+                <p>Félicitation! Vous avez explosé vos objectifs hier 👏</p>
+            </div>
+
             <div className="graphiques">
                 <section className="HorizonGauche">
                 <div className="Poids">
