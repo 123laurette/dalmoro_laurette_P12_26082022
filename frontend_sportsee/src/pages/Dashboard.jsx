@@ -14,15 +14,15 @@ import {useParams } from "react-router-dom"
 
 
 function Dashboard() {
-    const {userId} = useParams ()
+    const {id} = useParams ()
     // eslint-disable-next-line no-empty-pattern
     const [{/*datas*/}, setDatas]= useState({})
     useEffect(() => {
         (async() => {
             try{
-                const userData = await userHeaderData(userId)
+                const userData = await userHeaderData(id)
                 setDatas({userData})
-                console.log(userId)
+                console.log(id)
 
             }
             catch(error){
@@ -30,7 +30,7 @@ function Dashboard() {
             }
         })
         ()},
-        [userId]);
+        [id]);
     return (
         <div className="pageDashboard">
 
@@ -100,3 +100,5 @@ function Dashboard() {
 };
 
 export default Dashboard;
+
+

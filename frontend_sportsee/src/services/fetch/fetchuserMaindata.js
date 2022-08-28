@@ -1,8 +1,8 @@
 
 
 const mockeDatas = false;
-const getMainData = async(userId) => {
-    let url = `http://localhost:3000/user/${userId}`
+const getMainData = async(id) => {
+    let url = `http://localhost:3000/user/${id}`
     
         if(mockeDatas){
             url = `/mockUserData.json`

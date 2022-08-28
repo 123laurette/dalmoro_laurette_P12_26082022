@@ -17,6 +17,11 @@ root.render(
   </React.StrictMode>
 );
 
-
-//<Route path="/userData/:userId" element={<Dashboard />} />
-
+//*****je n'arrive pas a trouver le chemin vers les datas */
+/*  <Router>
+<NavH />
+<NavV />
+<Routes>
+  <Route path="/user/:id" element={<Dashboard />} />
+</Routes>
+</Router>*/
