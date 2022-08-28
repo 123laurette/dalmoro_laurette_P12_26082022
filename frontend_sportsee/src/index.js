@@ -4,24 +4,19 @@ import './index.css';
 import NavH from "./components/nav/Nav_h"
 import NavV from "./components/nav/Nav_v"
 import Dashboard from "./pages/Dashboard"
-import reportWebVitals from './reportWebVitals';
-//import PageConnexion from './pages/PageConnexion';
+import { BrowserRouter} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
+    <BrowserRouter>
       <NavH />
       <NavV />
       <Dashboard />
-
+    </BrowserRouter>
   </React.StrictMode>
 );
 
 
-reportWebVitals();
+//<Route path="/userData/:userId" element={<Dashboard />} />
 
-
-//      <PageConnexion />
-
-//<Route path="/" element={<Connexion/>} />

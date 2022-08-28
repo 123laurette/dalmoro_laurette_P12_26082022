@@ -1,0 +1,18 @@
+{
+    "data": 
+       {
+          "id":13,
+          "userInfos":{
+             "firstName":"Richard",
+             "lastName":"Martin",
+             "age":25
+          },
+          "todayScore":0.50,
+          "keyData":{
+             "calorieCount":1850,
+             "proteinCount":160,
+             "carbohydrateCount":300,
+             "lipidCount":60
+          }
+       }
+ }

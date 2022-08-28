@@ -1,5 +1,5 @@
 import "./../style/Dashboard.css"
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Calories from "./../assets/calories-icon.png"
 import Proteines from "./../assets/proteines-icon.png"
 import Glucides from "./../assets/glucides-icon.png"
@@ -8,22 +8,35 @@ import Poids from "./../components/graphiques/Poids"
 import Objectifs from "./../components/graphiques/Objectifs"
 import Radar from "./../components/graphiques/Radar"
 import Kpi from "./../components/graphiques/Kpi"
-
-
-//import { useParams } from "react-router-dom"
-//import { getIdUser } from "./../services/DataMock"
+import {userHeaderData} from "../services/provider/provuserMainData";
+import {useParams } from "react-router-dom"
 
 
 
 function Dashboard() {
-    //const {DataUserId} = useParams ()
-    //const userId = getIdUser(DataUserId)
+    const {userId} = useParams ()
+    console.log(userId)
+    // eslint-disable-next-line no-empty-pattern
+    const [{/*datas*/}, setDatas]= useState({})
+    useEffect(() => {
+        (async() => {
+            try{
+                const userData = await userHeaderData(userId)
+                setDatas({userData})
+            }
+            catch(error){
+                console.log("***error***")
+            }
+        })
+        ()},
+        [userId]);
+    
     return (
         <div className="pageDashboard">
 
             <div className="Bonjour">
                 <h1>Bonjour
-                    <span> Thomas
+                    <span className="userName">Thomas{/*datas.userData.userFirstName*/}
                     </span> 
                 </h1>
                 <p>Félicitation! Vous avez explosé vos objectifs hier 👏</p>

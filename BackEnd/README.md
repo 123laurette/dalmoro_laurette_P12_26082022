@@ -3,7 +3,7 @@
 //Ce référentiel contient tout le code source pour exécuter la micro API pour le tableau de bord d'analyse sportive SportSee.
 
 This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
-Ce référentiel contient tout le code source pour exécuter la micro API pour le tableau de bord d'analyse sportive SportSee.
+
 
 ## 1. General information
 
