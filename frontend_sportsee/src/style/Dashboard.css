@@ -6,6 +6,9 @@
 .Bonjour p{
     font-size: 18px;
 }
+.Bonjour span {
+    color: #ff0000;
+}
 .pageDashboard{
     width: 86%;
     height: 800px;

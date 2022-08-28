@@ -35,8 +35,8 @@ function Dashboard() {
         <div className="pageDashboard">
 
             <div className="Bonjour">
-                <h1>Bonjour
-                    <span className="userName">Thomas{/*datas.userData.userFirstName*/}
+                <h1>Bonjour {""}
+                    <span>Thomas{/*datas.userData.userFirstName*/}
                     </span> 
                 </h1>
                 <p>Félicitation! Vous avez explosé vos objectifs hier 👏</p>
