@@ -1,6 +1,8 @@
 import GetMainData from "../fetch/fetchuserMaindata";
 import MainData from "../modelisation/moduserMainData";
 
+
+
 async function userHeaderData(userId){
     let mainData = {}
     mainData = await GetMainData(userId);

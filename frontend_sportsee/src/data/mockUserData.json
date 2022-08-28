@@ -1,18 +1,18 @@
 {
-    "data": 
-       {
-          "id":13,
-          "userInfos":{
-             "firstName":"Richard",
-             "lastName":"Martin",
-             "age":25
-          },
-          "todayScore":0.50,
-          "keyData":{
-             "calorieCount":1850,
-             "proteinCount":160,
-             "carbohydrateCount":300,
-             "lipidCount":60
-          }
-       }
+   "data":
+   {
+      "id":20,
+      "userInfos":{
+         "firstName":"Julien",
+         "lastName":"Gallet",
+         "age":32
+      },
+      "todayScore":0.70,
+      "keyData":{
+         "calorieCount":1970,
+         "proteinCount":170,
+         "carbohydrateCount":500,
+         "lipidCount":70
+         }
+   }
  }

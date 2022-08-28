@@ -15,7 +15,6 @@ import {useParams } from "react-router-dom"
 
 function Dashboard() {
     const {userId} = useParams ()
-    console.log(userId)
     // eslint-disable-next-line no-empty-pattern
     const [{/*datas*/}, setDatas]= useState({})
     useEffect(() => {
@@ -23,6 +22,8 @@ function Dashboard() {
             try{
                 const userData = await userHeaderData(userId)
                 setDatas({userData})
+                console.log(userId)
+
             }
             catch(error){
                 console.log("***error***")
@@ -30,7 +31,6 @@ function Dashboard() {
         })
         ()},
         [userId]);
-    
     return (
         <div className="pageDashboard">
 
