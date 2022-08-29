@@ -11,4 +11,4 @@ async function userHeaderData(id){
     return userData;
 }
 
-export  {userHeaderData}
+export {userHeaderData}

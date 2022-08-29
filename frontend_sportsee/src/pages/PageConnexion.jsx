@@ -1,15 +1,16 @@
 import React from 'react';
 import "./../style/pageConnexion.css"
-import Connexion from "./../components/connexion/Connexion";
+//import Connexion from "./../components/connexion/Connexion";
+import { NavLink } from 'react-router-dom';
 
 
 function PageConnexion() {
     return (
         <div className="pageConnexion">
             <div className="cart">
-                <Connexion   name='Karl Dovineau' id="12"/>
-                <Connexion   name='Cecilia Ratorez' id="18"/>
-                <Connexion   name='Mocked Person' id="13"/>
+                <NavLink to={`/user/${12}`}><p>Karl Dovineau</p></NavLink>
+                <NavLink to={`/user/${18}`}><p>Cecilia Ratorez</p></NavLink> 
+                <NavLink to={`/user/${20}`}><p>Julien Gallet</p></NavLink> 
             </div>
         </div>
     );

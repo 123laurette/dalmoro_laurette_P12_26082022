@@ -4,20 +4,28 @@
     width: 50%;
     height: 100px;
     justify-content: space-around;
-    margin-top: -30%;
+    margin-top: -27%;
     margin-left: 500px;
 }
 
 
 .cart {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.cart a{
+    display: flex;
     justify-content: center;
-    font-size: 24px;
-    border-radius: 50%;
+    text-align: center;
     border: red solid;
-    color: black;
     width: 300px;
     height: 300px;
-    
+    border-radius: 50%;
+}
+.cart p {
+    margin-top: 45%;
+    font-size: 24px;
+    color: black;
+
 }

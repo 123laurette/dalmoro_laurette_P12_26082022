@@ -4,11 +4,11 @@ import Calories from "./../assets/calories-icon.png"
 import Proteines from "./../assets/proteines-icon.png"
 import Glucides from "./../assets/glucides-icon.png"
 import Lipides from "./../assets/lipides-icon.png"
-import Poids from "./../components/graphiques/Poids"
-import Objectifs from "./../components/graphiques/Objectifs"
-import Radar from "./../components/graphiques/Radar"
-import Kpi from "./../components/graphiques/Kpi"
-import {userHeaderData} from "../services/provider/provuserMainData";
+import Poids from "../components/rechart/Poids"
+import Objectifs from "../components/rechart/Objectifs"
+import Radar from "../components/rechart/Radar"
+import Kpi from "../components/rechart/Kpi"
+import {userHeaderData} from "./../services/provider/provuserMainData";
 import {useParams } from "react-router-dom"
 
 

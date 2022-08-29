@@ -4,18 +4,23 @@ import './index.css';
 import NavH from "./components/nav/Nav_h"
 import NavV from "./components/nav/Nav_v"
 import Dashboard from "./pages/Dashboard"
-import { BrowserRouter} from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import PageConnexion from './pages/PageConnexion';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
     <BrowserRouter>
       <NavH />
       <NavV />
-      <Dashboard />
+      <Routes>
+        <Route path="/" element={<PageConnexion/>} />
+        <Route path="/user/:id" element={<Dashboard />} />
+      </Routes>
     </BrowserRouter>
-  </React.StrictMode>
 );
+//supprimé React.StricMode, car cela me doublait les réponses console
+
+
 
 //*****je n'arrive pas a trouver le chemin vers les datas */
 /*  <Router>
