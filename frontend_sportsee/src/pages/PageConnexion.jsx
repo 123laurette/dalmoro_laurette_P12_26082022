@@ -1,10 +1,9 @@
 import React from 'react';
 import "./../style/pageConnexion.css"
-//import Connexion from "./../components/connexion/Connexion";
 import { NavLink } from 'react-router-dom';
 
 
-function PageConnexion() {
+function PageConnexion(id) {
     return (
         <div className="pageConnexion">
             <div className="cart">

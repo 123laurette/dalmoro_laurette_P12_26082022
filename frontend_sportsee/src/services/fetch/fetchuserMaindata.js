@@ -1,19 +1,16 @@
+async function getMainData (userId) {
+    //const mockeUser = false
+    let url = `http://localhost:3000/user/${userId}`
+    /*if(mockeUser){
+        url = "./../../data/mockUserData.json"
+    }*/
 
+    const response = await fetch (url);
+    console.log(response)
+    const datas = await response.json();
+    console.log (datas)
+    console.log(datas.firstname)
 
-const mockeDatas = false;
-const getMainData = async(id) => {
-    let url = `http://localhost:3000/user/${id}`
-    
-        if(mockeDatas){
-            url = `/mockUserData.json`
-        }else{}
-        const response = await fetch(url);
-        const mainData = await response.json();
-        console.log(mainData)
-
-        return mainData.data;
-    }
-
-
-
+    return datas;
+}
 export default getMainData
