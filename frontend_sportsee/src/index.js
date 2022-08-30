@@ -4,16 +4,19 @@ import './index.css';
 import NavH from "./components/nav/Nav_h"
 import NavV from "./components/nav/Nav_v"
 import Dashboard from "./pages/Dashboard"
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <React.StrictMode>
     <BrowserRouter>
       <NavH />
       <NavV />
       <Routes>
-        <Route path="/user/:id" element={<Dashboard />} />
+        <Route path="/userId" element = {<Dashboard />} />
       </Routes>
     </BrowserRouter>
+  </React.StrictMode>
+
 );
 //supprimé React.StricMode, car cela me doublait les réponses console

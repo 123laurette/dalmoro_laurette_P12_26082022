@@ -1,5 +1,4 @@
 import "./../style/Dashboard.css"
-import React, { useEffect, useState } from 'react';
 import Calories from "./../assets/calories-icon.png"
 import Proteines from "./../assets/proteines-icon.png"
 import Glucides from "./../assets/glucides-icon.png"
@@ -8,35 +7,55 @@ import Poids from "../components/rechart/Poids"
 import Objectifs from "../components/rechart/Objectifs"
 import Radar from "../components/rechart/Radar"
 import Kpi from "../components/rechart/Kpi"
-import {userHeaderData} from "./../services/provider/provuserMainData";
-import {useParams } from "react-router-dom"
+import DataUser from "../services/fetch/fetchMock"
 
+import { useParams, useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
 
 
 function Dashboard() {
-    const {id} = useParams ()
-    // eslint-disable-next-line no-empty-pattern
-    const [, setDatas]= useState("")
-    useEffect(() => {
-        (async() => {
-            try{
-                const userData = await userHeaderData(id)
-                setDatas({userData})
-                console.log(id)
+    const {id} = useParams()
+    const navigate = useNavigate()
+    const [userMain, setUserMain] = useState()
+    const [userActivity, setUserActivity] = useState()
+    const [userSessions, setUserSessions] = useState()
+    const [userPerformance, setUserPerformance] = useState()
 
-            }
-            catch(error){
-                console.log("***error***")
-            }
-        })
-        ()},
-        [id]);
+    useEffect(() => {
+        DataUser(id)
+            .then(data => {
+                if (typeof data.data !== "undefined") {
+                    setUserMain(data)
+
+                    DataUser(id, "activity")
+                    .then(data => setUserActivity(data))
+                    .catch(error => console.log("erreur activity",error))
+
+                    DataUser(id, "sessions")
+                    .then(data => setUserSessions(data))
+                    .catch(error => console.log("erreur sessions", error))
+
+                    DataUser(id, "performance")
+                    .then(data => setUserPerformance(data))
+                    .catch(error => console.log("erreur performance", error))
+                }else{
+                    navigate("/Error")
+                }
+            })
+            .cath(error => console.log("erreur données id", error))
+    },
+    [id, navigate])
+    
+    if (!userMain || !userActivity || !userSessions || !userPerformance) {
+        return null
+    }
+
     return (
         <div className="pageDashboard">
 
             <div className="Bonjour">
-                <h1>Bonjour {""}
-                    <span>{/*`${data.userFirstName}`*/}
+                <h1>Bonjour {userMain.data.userInfos.firstName}
+                    <span>{}
                     </span> 
                 </h1>
                 <p>Félicitation! Vous avez explosé vos objectifs hier 👏</p>
