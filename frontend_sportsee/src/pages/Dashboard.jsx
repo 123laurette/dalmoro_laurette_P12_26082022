@@ -16,7 +16,7 @@ import {useParams } from "react-router-dom"
 function Dashboard() {
     const {id} = useParams ()
     // eslint-disable-next-line no-empty-pattern
-    const [, setDatas]= useState({})
+    const [, setDatas]= useState("")
     useEffect(() => {
         (async() => {
             try{
@@ -36,7 +36,7 @@ function Dashboard() {
 
             <div className="Bonjour">
                 <h1>Bonjour {""}
-                    <span>Thomas{/*`${data.userFirstName}`*/}
+                    <span>{/*`${data.userFirstName}`*/}
                     </span> 
                 </h1>
                 <p>Félicitation! Vous avez explosé vos objectifs hier 👏</p>
