@@ -1,26 +1,27 @@
-import {USER_MAIN_DATA, USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_PERFORMANCE } from "./../../data/mockData"
+import {userMainData, userActivityData, userAverageSessionsData, userPerformanceData } from "../../data/mockData"
+import {mainData, activityData, averageSessionsData, performanceData} from "../ClassModelisation"
 
 function getUserMainData(id) {
-    const data = USER_MAIN_DATA.find(value => value.id.toString() === id);
-    const userMain = {data};
+    const data = userMainData.find(value => value.id.toString() === id);
+    const userMain = new mainData(data);
     return userMain;
 }
 
 function getUserActivity(id) {
-    const data = USER_ACTIVITY.find (value => value.userId.toString() === id);
-    const userActivity = {data};
+    const data = userActivityData.find (value => value.userId.toString() === id);
+    const userActivity = new activityData(data);
     return userActivity;
 }
 
 function getUserAverageSessions(id) {
-    const data = USER_AVERAGE_SESSIONS.find (value => value.userId.toString() === id);
-    const userSessions = {data};
+    const data = userAverageSessionsData.find (value => value.userId.toString() === id);
+    const userSessions = new averageSessionsData(data);
     return userSessions;
     ;
 }
 function getUserPerformance(id) {
-    const data = USER_PERFORMANCE.find (value => value.userId.toString() === id);
-    const userPerformance = {data};
+    const data = userPerformanceData.find (value => value.userId.toString() === id);
+    const userPerformance = new performanceData(data);
     return userPerformance;
 }
 const getData = async (id, categorie) => {

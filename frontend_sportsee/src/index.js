@@ -1,22 +1,21 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import NavH from "./components/nav/Nav_h"
 import NavV from "./components/nav/Nav_v"
 import Dashboard from "./pages/Dashboard"
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
+  <BrowserRouter>
       <NavH />
       <NavV />
       <Routes>
-        <Route path="/userId" element = {<Dashboard />} />
+        <Route path="/user/:id" element={<Dashboard />} />
       </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
+  </BrowserRouter>  
 
 );
 //supprimé React.StricMode, car cela me doublait les réponses console

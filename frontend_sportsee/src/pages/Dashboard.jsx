@@ -1,16 +1,17 @@
 import "./../style/Dashboard.css"
+import { useParams, useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
 import Calories from "./../assets/calories-icon.png"
 import Proteines from "./../assets/proteines-icon.png"
 import Glucides from "./../assets/glucides-icon.png"
 import Lipides from "./../assets/lipides-icon.png"
-import Poids from "../components/rechart/Poids"
-import Objectifs from "../components/rechart/Objectifs"
-import Radar from "../components/rechart/Radar"
-import Kpi from "../components/rechart/Kpi"
+import Activity from "./../components/rechart/Activity"
+import Sessions from "./../components/rechart/Sessions"
+import Performance from "./../components/rechart/Score"
+import Score from "../components/rechart/Score"
 import DataUser from "../services/fetch/fetchMock"
 
-import { useParams, useNavigate } from "react-router-dom"
-import { useEffect, useState } from "react"
+
 
 
 function Dashboard() {
@@ -23,6 +24,7 @@ function Dashboard() {
 
     useEffect(() => {
         DataUser(id)
+
             .then(data => {
                 if (typeof data.data !== "undefined") {
                     setUserMain(data)
@@ -42,6 +44,7 @@ function Dashboard() {
                     navigate("/Error")
                 }
             })
+
             .cath(error => console.log("erreur données id", error))
     },
     [id, navigate])
@@ -54,30 +57,29 @@ function Dashboard() {
         <div className="pageDashboard">
 
             <div className="Bonjour">
-                <h1>Bonjour {userMain.data.userInfos.firstName}
-                    <span>{}
-                    </span> 
+                <h1>Bonjour {""} 
+                    <span>{this.firstName/*userMain.data.userInfos.firstName*/}</span> 
                 </h1>
                 <p>Félicitation! Vous avez explosé vos objectifs hier 👏</p>
             </div>
 
             <div className="graphiques">
                 <section className="HorizonGauche">
-                <div className="Poids">
-                    <Poids/>
+                <div className="activity">
+                    <Activity userActivity={userActivity.data.sessions}/>
                 </div>
 
                 <section className="carre">
-                    <div className="Objectifs">
-                    <Objectifs/>
+                    <div className="sessions">
+                    <Sessions userSessions={userSessions.data.sessions}/>
 
                     </div>
-                    <div className="Radar">
-                    <Radar/>
+                    <div className="performance">
+                    <Performance userPerformance={userPerformance.data.data}/>
 
                     </div>
-                    <div className="Kpi">
-                    <Kpi/>
+                    <div className="score">
+                    <Score userMain={userMain.data.score}/>
 
                     </div>
                 </section>
@@ -87,28 +89,28 @@ function Dashboard() {
                     <div className="Calories">
                         <img src={Calories} alt="" />
                         <div className="Infos">
-                            <h3>1.930kCal</h3>
+                            <h3>userMain={userMain.data.keyData.calorieCount}</h3>
                             <p>Calories</p>
                         </div>
                     </div>
                     <div className="Proteines">
                         <img src={Proteines} alt="" />
                         <div className="Infos">
-                            <h3>155g</h3>
+                            <h3>userMain={userMain.data.keyData.proteinCount}</h3>
                             <p>Proteines</p>
                         </div>
                     </div>
                     <div className="Glucides">
                         <img src={Glucides} alt="" />
                         <div className="Infos">
-                            <h3>290g</h3>
+                            <h3>userMain={userMain.data.keyData.carbohydrateCount}</h3>
                             <p>Glucides</p>
                         </div>
                     </div>
                     <div className="Lipides">
                         <img src={Lipides} alt="" />
                         <div className="Infos">
-                            <h3>50g</h3>
+                            <h3>userMain={userMain.data.keyData.lipidCount}</h3>
                             <p>Lipides</p>
                         </div>
                     </div>
