@@ -1,3 +1,4 @@
+//class importer dans le fichier fetchMock
 class mainData {
     constructor(data) {
         this.id = data.id;

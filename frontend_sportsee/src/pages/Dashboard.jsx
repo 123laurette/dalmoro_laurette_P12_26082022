@@ -10,6 +10,8 @@ import Sessions from "./../components/rechart/Sessions"
 import Performance from "./../components/rechart/Score"
 import Score from "../components/rechart/Score"
 import DataUser from "../services/fetch/fetchMock"
+//import DataUser from "../services/fetch/fetchApi"
+console.log (DataUser)
 
 
 
