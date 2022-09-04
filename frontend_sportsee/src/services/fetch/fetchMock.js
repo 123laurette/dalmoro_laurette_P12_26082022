@@ -8,7 +8,7 @@ function getUserMainData(id) {
 }
 
 function getUserActivity(id) {
-    const data = userActivityData.find (value => value.userId.toString() === id);
+    const data = userActivityData.find (value => value.userId.toString() === id);   //userActivityData = const dans le mock
     const userActivity = new activityData(data);
     return userActivity;
 }

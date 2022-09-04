@@ -1,58 +1,39 @@
-import React, { PureComponent } from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import React from 'react';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer} from 'recharts';
 
-const data = [
-  {
-    subject: 'Intensité',
-    A: 120,
-    B: 110,
-    fullMark: 150,
-  },
-  {
-    subject: 'Vitesse',
-    A: 98,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: 'Force',
-    A: 86,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: 'Endurance',
-    A: 99,
-    B: 100,
-    fullMark: 150,
-  },
-  {
-    subject: 'Energie',
-    A: 85,
-    B: 90,
-    fullMark: 150,
-  },
-  {
-    subject: 'Cardio',
-    A: 65,
-    B: 85,
-    fullMark: 150,
-  },
-];
 
-export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/simple-radar-chart-rjoc6';
-
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-          <PolarGrid />
-          <PolarAngleAxis dataKey="subject" stroke='#ffffff' />
-          <PolarRadiusAxis />
-          <Radar name="Mike" dataKey="A" stroke="#ffffff" fill="red" fillOpacity={0.9} />
-        </RadarChart>
-      </ResponsiveContainer>
-    );
+/**
+ * Display user's performances chart 
+ * @component
+ * @param {Array} performance - array of performances datas
+ * @returns {JSX.Element} PerformanceGraph component
+ */
+function namePerf(kind){
+  switch(kind){
+    case 1 : return "cardio";
+    case 2 : return "energy";
+    case 3 : return "endurance";
+    case 4 : return "strength";
+    case 5 : return "speed";
+    case 6 : return "intensity";
+    default : return null;
+    
   }
 }
+const PerformanceGraph = ({userPerformance}) => {
+    console.log(userPerformance)
+    return (
+        <div className="squareGraph performGraph">
+            <ResponsiveContainer   width="100%" aspect={1} >
+                <RadarChart margin={{ top: 30, right: 30, bottom: 30, left: 30 }} style={{backgroundColor: "#282D30"}}  data={userPerformance} >
+                    <PolarGrid radialLines={false} />
+                    <PolarAngleAxis dataKey="kind" tickFormatter={namePerf} tickLine={false} axisLine={false} dy={5} stroke="#FFF" tick={{fill:"#FFFFFF",fontSize:12}}/>
+                    <PolarRadiusAxis tick={false} tickCount={6} axisLine={false} />
+                    <Radar  dataKey="value"  fill="#FF0101" fillOpacity={0.6} />
+                </RadarChart>
+            </ResponsiveContainer>
+        </div>
+    );
+};
+
+export default PerformanceGraph;

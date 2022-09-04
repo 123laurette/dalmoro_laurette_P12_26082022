@@ -154,31 +154,31 @@ const userAverageSessionsData = [
         sessions: [
             {
                 day: 1,
-                sessionLength: 30
+                sessionLength: 35
             },
             {
                 day: 2,
-                sessionLength: 40
+                sessionLength: 45
             },
             {
                 day: 3,
-                sessionLength: 50
+                sessionLength: 55
             },
             {
                 day: 4,
-                sessionLength: 30
+                sessionLength: 35
             },
             {
                 day: 5,
-                sessionLength: 30
+                sessionLength: 35
             },
             {
                 day: 6,
-                sessionLength: 50
+                sessionLength: 55
             },
             {
                 day: 7,
-                sessionLength: 50
+                sessionLength: 55
             }
         ]
     }

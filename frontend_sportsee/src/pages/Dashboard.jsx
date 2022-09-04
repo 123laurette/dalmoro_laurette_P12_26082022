@@ -7,11 +7,10 @@ import Glucides from "./../assets/glucides-icon.png"
 import Lipides from "./../assets/lipides-icon.png"
 import Activity from "./../components/rechart/Activity"
 import Sessions from "./../components/rechart/Sessions"
-import Performance from "./../components/rechart/Score"
+import Performance from "./../components/rechart/Performance"
 import Score from "../components/rechart/Score"
-import DataUser from "../services/fetch/fetchMock"
-//import DataUser from "../services/fetch/fetchApi"
-console.log (DataUser)
+//import dataUser from "../services/fetch/fetchMock"
+import dataUser from "../services/fetch/fetchApi"
 
 
 
@@ -25,21 +24,21 @@ function Dashboard() {
     const [userPerformance, setUserPerformance] = useState()
 
     useEffect(() => {
-        DataUser(id)
+        dataUser(id)
 
             .then(data => {
-                if (typeof data.data !== "undefined") {
+                if (typeof data !== "undefined") {
                     setUserMain(data)
 
-                    DataUser(id, "activity")
+                    dataUser(id, "activity")
                     .then(data => setUserActivity(data))
                     .catch(error => console.log("erreur activity",error))
 
-                    DataUser(id, "sessions")
+                    dataUser(id, "sessions")
                     .then(data => setUserSessions(data))
                     .catch(error => console.log("erreur sessions", error))
 
-                    DataUser(id, "performance")
+                    dataUser(id, "performance")
                     .then(data => setUserPerformance(data))
                     .catch(error => console.log("erreur performance", error))
                 }else{
@@ -47,7 +46,7 @@ function Dashboard() {
                 }
             })
 
-            .cath(error => console.log("erreur données id", error))
+            .catch(error => console.log("erreur données id", error))
     },
     [id, navigate])
     
@@ -60,7 +59,7 @@ function Dashboard() {
 
             <div className="Bonjour">
                 <h1>Bonjour {""} 
-                    <span>{this.firstName/*userMain.data.userInfos.firstName*/}</span> 
+                    <span>{userMain.firstName}</span> 
                 </h1>
                 <p>Félicitation! Vous avez explosé vos objectifs hier 👏</p>
             </div>
@@ -68,20 +67,19 @@ function Dashboard() {
             <div className="graphiques">
                 <section className="HorizonGauche">
                 <div className="activity">
-                    <Activity userActivity={userActivity.data.sessions}/>
+                    <Activity userActivity={userActivity.sessions}/>
                 </div>
-
                 <section className="carre">
                     <div className="sessions">
-                    <Sessions userSessions={userSessions.data.sessions}/>
+                    <Sessions userSessions={userSessions.sessions}/>
 
                     </div>
                     <div className="performance">
-                    <Performance userPerformance={userPerformance.data.data}/>
+                    <Performance userPerformance={userPerformance.data}/>
 
                     </div>
                     <div className="score">
-                    <Score userMain={userMain.data.score}/>
+                    <Score userMain={userMain.todayScore*100}/>
 
                     </div>
                 </section>
@@ -91,28 +89,28 @@ function Dashboard() {
                     <div className="Calories">
                         <img src={Calories} alt="" />
                         <div className="Infos">
-                            <h3>userMain={userMain.data.keyData.calorieCount}</h3>
+                            <h3>{userMain.calorie}kCal</h3>
                             <p>Calories</p>
                         </div>
                     </div>
                     <div className="Proteines">
                         <img src={Proteines} alt="" />
                         <div className="Infos">
-                            <h3>userMain={userMain.data.keyData.proteinCount}</h3>
+                            <h3>{userMain.proteine}g</h3>
                             <p>Proteines</p>
                         </div>
                     </div>
                     <div className="Glucides">
                         <img src={Glucides} alt="" />
                         <div className="Infos">
-                            <h3>userMain={userMain.data.keyData.carbohydrateCount}</h3>
+                            <h3>{userMain.glucide}g</h3>
                             <p>Glucides</p>
                         </div>
                     </div>
                     <div className="Lipides">
                         <img src={Lipides} alt="" />
                         <div className="Infos">
-                            <h3>userMain={userMain.data.keyData.lipidCount}</h3>
+                            <h3>{userMain.lipide}g</h3>
                             <p>Lipides</p>
                         </div>
                     </div>

@@ -10,16 +10,14 @@ class mainData {
         this.proteine = data.keyData.proteinCount;
         this.glucide = data.keyData.carbohydrateCount;
         this.lipide = data.keyData.lipidCount
-        this.formatScore = this.formatScore(this.todayScore);
     }
-    formatScore() {
-        return [{value : this.todayScore * 100}]
-    }
+    
 }
 
 class activityData {
     constructor(data) {
         this.id = data.userId;
+        this.sessions = data.sessions;
         this.day = data.sessions.day;
         this.kilo = data.sessions.kilogram;
         this.calorie = data.sessions.calories;
@@ -29,6 +27,7 @@ class activityData {
 class averageSessionsData {
     constructor(data) {
         this.id = data.userId;
+        this.sessions = data.sessions;
         this.day = data.sessions.day;
         this.session = data.sessions.sessionLength;
     }
@@ -36,8 +35,8 @@ class averageSessionsData {
 
 class performanceData {
     constructor(data) {
-        this.value = data.data.value;
-        this.kind = data.data.kind
+        this.data = data.data
+        this.kind = data.kind
     }
 }
 

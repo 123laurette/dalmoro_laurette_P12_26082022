@@ -1,76 +1,92 @@
-import React, { PureComponent } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React from 'react';
+import {
+    ResponsiveContainer,
+    LineChart,
+    Line,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Rectangle
+} from "recharts"; 
 
-const data = [
-  {
-    name: 'L',
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: 'M',
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: 'M',
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: 'J',
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: 'V',
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: 'S',
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: 'D',
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
 
-export default class Example extends PureComponent {
-  static demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
 
-  render() {
-    return (
-      <ResponsiveContainer width="100%" height="100%">
-        <LineChart
-          width={500}
-          height={300}
-          data={data}
-          margin={{
-            top: 100,
-            right: 20,
-            left: -40,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" stroke='transparent'/>
-          <XAxis dataKey="name" stroke='white' Line strokeOpacity={0}/>
-          <YAxis stroke='transparent'/>
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#ffffff" activeDot={{ r: 8 }} />
-        </LineChart>
-      </ResponsiveContainer>
-    );
-  }
+/**
+ * @param {boolean}  [Props.active='true']
+ * @param {array}   [Props.payload=[]]
+ * @returns an active tooltip or null
+ */
+const CustomTooltip=({active, payload})=>{
+    if (active) {
+        return (
+            <div className="customTooltipSession">
+                <p className="tooltipDataSession">{`${payload[0].value} `}min</p>
+            </div>
+        );
 }
+return null;
+}
+/** 
+ * @returns a grey rectangle displayed with mouth moving over the chart
+ */
+const CustomCursor = ({points}) => {
+    return <Rectangle fill="#000000" opacity={0.2} x={points[1].x} width={1000} height={300} />;
+};
+
+function nameDay(day){
+    switch(day){
+      case 1 : return "L";
+      case 2 : return "M";
+      case 3 : return "M";
+      case 4 : return "J";
+      case 5 : return "V";
+      case 6 : return "S";
+      case 7 : return "D";
+
+      default : return null;
+      
+    }
+  }
+
+/**
+ * Display user's daily activity chart 
+ * @component
+ * @param {Array} sessions - user sessions datas
+ * @returns {JSX.Element} SessionsGraph component
+ */
+const SessionsGraph = ({userSessions}) => {
+    //console.log(sessions)
+    return (
+        <div className='squareGraph sessionGraph'>
+            <ResponsiveContainer width="100%" aspect={1}>
+                <LineChart
+                    style={{backgroundColor: "#FF0000"}}
+                    width={258}
+                    height={263}
+                    data={userSessions}
+                    margin={{
+                        top: 50,
+                        right: -2,
+                        left: -60,
+                        bottom: 10
+                    }}>    
+                    
+                    <CartesianGrid  vertical={false} horizontal={false}/>
+                    <XAxis dataKey="day"tickFormatter={nameDay} tickLine={false} fillOpacity={0.5} style={{ transform: 'scale(0.9)', transformOrigin: 'bottom' }}tick={{fill:"#FFFFFF",  fontWeight:500, fontSize:12}} tickMargin={10}  axisLine={false} interval="preserveStartEnd"/>
+                    <YAxis axisLine={false} tickLine={false} tick={false} domain={['dataMin - 5', 'dataMax + 5']}/>
+                    <Tooltip  content={<CustomTooltip/>} cursor={<CustomCursor/>}/>
+                    <Line type="monotone" dataKey="sessionLength"  stroke="#FFFFFF"dot={false} opacity={0.8} strokeWidth={2}/>
+                    <text className='graphTitle' x="12%" y="15%" width={147} height={48}textAnchor="start" dominantBaseline="middle"  fill="#FFFFFF" style={{fontWeight:500, opacity:0.5}} >
+                    Durée moyenne des </text>
+                    <text className='graphTitle' x="12%" y="25%" width={147} height={48}textAnchor="start" dominantBaseline="middle"  fill="#FFFFFF" style={{ fontWeight:500, opacity:0.5}} >
+                    sessions</text>
+                    
+                </LineChart>
+            </ResponsiveContainer>
+        </div>
+    );
+};
+
+export default SessionsGraph;
+
