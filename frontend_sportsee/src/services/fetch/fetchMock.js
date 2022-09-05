@@ -1,6 +1,11 @@
 import {userMainData, userActivityData, userAverageSessionsData, userPerformanceData } from "../../data/mockData"
 import {mainData, activityData, averageSessionsData, performanceData} from "../ClassModelisation"
 
+/**
+ * retrieve the mocked data and create a new class
+ * @param {number} id 
+ * @returns new class data
+ */
 function getUserMainData(id) {
     const data = userMainData.find(value => value.id.toString() === id);
     const userMain = new mainData(data);
@@ -24,6 +29,15 @@ function getUserPerformance(id) {
     const userPerformance = new performanceData(data);
     return userPerformance;
 }
+
+/**
+ * retrieve data in the function
+ * @param {number} id 
+ * @param {string} categorie 
+ * @returns function (id, categorie)
+    
+ }}
+ */
 const getData = async (id, categorie) => {
     switch (categorie) {
         case "activity": return getUserActivity(id);

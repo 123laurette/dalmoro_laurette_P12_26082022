@@ -7,9 +7,9 @@ import iconePoids from "./../../assets/icon poids.png"
 import copy from "./../../assets/Copiryght, SportSee 2020.png"
 
 /**
- * barre de navigation verticale
+ * vertical nav bar
  * @component
- * @returns composant jsx
+ * @returns component jsx
  */
 
 function NavVertical () {

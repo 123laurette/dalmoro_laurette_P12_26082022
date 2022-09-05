@@ -9,11 +9,13 @@ import Activity from "./../components/rechart/Activity"
 import Sessions from "./../components/rechart/Sessions"
 import Performance from "./../components/rechart/Performance"
 import Score from "../components/rechart/Score"
-//import dataUser from "../services/fetch/fetchMock"
-import dataUser from "../services/fetch/fetchApi"
+import dataUser from "../services/fetch/fetchMock"
+//import dataUser from "../services/fetch/fetchApi"
 
-
-
+/**
+ * 
+ * @returns Dashboard include components
+ */
 
 function Dashboard() {
     const {id} = useParams()
@@ -23,6 +25,7 @@ function Dashboard() {
     const [userSessions, setUserSessions] = useState()
     const [userPerformance, setUserPerformance] = useState()
 
+    
     useEffect(() => {
         dataUser(id)
 
@@ -70,18 +73,19 @@ function Dashboard() {
                     <Activity userActivity={userActivity.sessions}/>
                 </div>
                 <section className="carre">
+
                     <div className="sessions">
                     <Sessions userSessions={userSessions.sessions}/>
-
                     </div>
+
                     <div className="performance">
                     <Performance userPerformance={userPerformance.data}/>
-
                     </div>
+
                     <div className="score">
                     <Score userMain={userMain.todayScore*100}/>
-
                     </div>
+
                 </section>
                 </section>
                 <section className="VerticalDroite">

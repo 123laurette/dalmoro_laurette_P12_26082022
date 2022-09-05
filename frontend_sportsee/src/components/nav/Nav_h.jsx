@@ -3,9 +3,9 @@ import React from "react"
 import logo from "./../../assets/logo.png"
 
 /**
- * barre de navigation horizontale
+ * horizontal nav bar
  * @component
- * @returns composant jsx
+ * @returns component jsx
  */
 function NavHorizon (){
     return (
