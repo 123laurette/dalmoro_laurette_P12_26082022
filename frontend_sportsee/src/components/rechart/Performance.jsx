@@ -1,12 +1,10 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer} from 'recharts';
 
-
 /**
- * Display user's performances chart 
- * @component
- * @param {Array} performance - array of performances datas
- * @returns {JSX.Element} PerformanceGraph component
+ * Nomme les différentes catégories performances
+ * @param {object} kind 
+ * @returns string ou null
  */
 function namePerf(kind){
   switch(kind){
@@ -20,6 +18,13 @@ function namePerf(kind){
     
   }
 }
+/**
+ * Display performances d'un utilisateur
+ * @component
+ * @param {array} userPerformance - array datas performances
+ * @returns composant jsx - graphique
+ */
+
 const PerformanceGraph = ({userPerformance}) => {
     console.log(userPerformance)
     return (

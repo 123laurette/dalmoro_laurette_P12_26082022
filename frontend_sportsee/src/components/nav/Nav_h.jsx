@@ -2,7 +2,11 @@ import "./Nav_h.css"
 import React from "react"
 import logo from "./../../assets/logo.png"
 
-
+/**
+ * barre de navigation horizontale
+ * @component
+ * @returns composant jsx
+ */
 function NavHorizon (){
     return (
         <div className="Horizon">

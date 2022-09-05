@@ -43,4 +43,3 @@ class performanceData {
 export {mainData, activityData, averageSessionsData,performanceData}
 
 //créa d'une classe qui reprend les clés du data.js
-//mise en pourcentage du montant des scores (todayScore ou score)

@@ -1,16 +1,5 @@
 import React from 'react';
-import {
-    ResponsiveContainer,
-    LineChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    Rectangle
-} from "recharts"; 
-
-
+import {ResponsiveContainer,LineChart,Line,XAxis,YAxis,CartesianGrid,Tooltip,Rectangle} from "recharts"; 
 
 /**
  * @param {boolean}  [Props.active='true']
@@ -27,6 +16,7 @@ const CustomTooltip=({active, payload})=>{
 }
 return null;
 }
+
 /** 
  * @returns a grey rectangle displayed with mouth moving over the chart
  */
@@ -36,18 +26,17 @@ const CustomCursor = ({points}) => {
 
 function nameDay(day){
     switch(day){
-      case 1 : return "L";
-      case 2 : return "M";
-      case 3 : return "M";
-      case 4 : return "J";
-      case 5 : return "V";
-      case 6 : return "S";
-      case 7 : return "D";
+        case 1 : return "L";
+        case 2 : return "M";
+        case 3 : return "M";
+        case 4 : return "J";
+        case 5 : return "V";
+        case 6 : return "S";
+        case 7 : return "D";
 
-      default : return null;
-      
+        default : return null;
     }
-  }
+}
 
 /**
  * Display user's daily activity chart 

@@ -1,3 +1,9 @@
+[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

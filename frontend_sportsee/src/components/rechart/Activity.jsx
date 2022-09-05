@@ -1,6 +1,12 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
+/**
+ * 
+ * @param {boolean}  [Props.active='true']
+ * @param {array}   [Props.payload=[]]
+ * @returns an activ tooltip or null
+ */
 
 const CustomTooltip=({active, payload})=>{
   if (active) {
@@ -13,6 +19,14 @@ const CustomTooltip=({active, payload})=>{
   }
 return null;
 }
+
+/**
+ * Display resultat kilogramme et calories journalier d'un utilisateur
+ * @component
+ * @param {array} userActivity - array datas sessions/activity 
+ * @returns composant jsx - graphique
+ */
+
 const ActivityGraph = ({userActivity}) => {
     return (
       <div className='activityGraph'>

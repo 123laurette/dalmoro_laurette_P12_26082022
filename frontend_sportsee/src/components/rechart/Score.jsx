@@ -1,14 +1,14 @@
 import React from 'react';
 import { RadialBarChart, RadialBar,  ResponsiveContainer, PolarAngleAxis } from 'recharts';
 
-
-
 /**
- * Display user's score chart 
+ * Display score d'un utilisateur en pourcentage
  * @component
- * @param {number} score - user score number
- * @returns {JSX.Element} ScoreGraph component
+ * @param {number} userMain/todayScore - datas scores
+ * @returns composant jsx - graphique
  */
+
+
 const ScoreGraph = ({userMain}) => {
   const data = 
     [{

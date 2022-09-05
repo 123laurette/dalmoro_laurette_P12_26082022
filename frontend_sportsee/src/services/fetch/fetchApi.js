@@ -1,4 +1,6 @@
 // eslint-disable-next-line no-template-curly-in-string
+//import dataClass from "../ClassModelisation"
+
 const url = "http://localhost:3000/user";
 console.log (url)
 
@@ -11,9 +13,8 @@ const getData = async (id, categorie) => {
 
     const dataFetch = await data.json()
     console.log(dataFetch)
-
+    
     return dataFetch
 }
-console.log (getData)
 
 export default getData
