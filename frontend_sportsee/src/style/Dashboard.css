@@ -71,3 +71,23 @@
 .Infos p {
     color: #74798c ;
 }
+
+@media screen and (max-width:1024px) {
+    .pageDashboard{
+        margin-top: -80%;
+        margin-left: 150px;
+    }
+    .VerticalDroite {
+        width: 21%;
+        height: 532px;
+    }
+    .Calories, .Proteines, .Glucides, .Lipides {
+        height: 110px;
+    }
+    
+    .sessions, .performance, .score {
+        border: blue solid;
+        height: 100%;
+    }
+    
+}
