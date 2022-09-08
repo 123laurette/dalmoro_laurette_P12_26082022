@@ -18,5 +18,6 @@
     "dev": "node_modules/.bin/nodemon app/index.js",
     "start": "node app/index.js"
   },
-  "packageManager": "yarn@3.2.3"
+  "packageManager": "yarn@3.2.3",
+  "type": "module"
 }
