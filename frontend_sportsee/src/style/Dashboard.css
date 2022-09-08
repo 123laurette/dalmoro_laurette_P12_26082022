@@ -75,19 +75,11 @@
     .pageDashboard{
         margin-left: 170px;
     }
-  
     .VerticalDroite {
         width: 19%;
         height: 500px;
     }
-    .activity{
-        height: 255px;
-    }
     
-    .activityGraph .recharts-responsive-container{
-        border: blue solid;
-        aspect-ratio: 3;
-    }
     .Calories, .Proteines, .Glucides, .Lipides {
     height: 80px;
     }
@@ -96,7 +88,7 @@
         width: 50px;  
         height: 50px;
     }
-
+    
     .Infos{
         margin-left: 10px;
     }
