@@ -30,7 +30,8 @@ const CustomTooltip=({active, payload})=>{
 const ActivityGraph = ({userActivity}) => {
   return (
     <div className='activityGraph'>
-      <ResponsiveContainer width="100%"  aspect={4}>  
+
+      <ResponsiveContainer width="100%"  aspect={4} >  
       
         <BarChart
           width={835}

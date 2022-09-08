@@ -10,7 +10,7 @@ import Sessions from "./../components/rechart/Sessions"
 import Performance from "./../components/rechart/Performance"
 import Score from "../components/rechart/Score"
 //import dataUser from "../services/fetch/fetchMock"
-import dataUser from "./../../../BackEnd/app/data"
+import dataUser from "../services/fetch/fetchApi.js"
 
 /**
  * 

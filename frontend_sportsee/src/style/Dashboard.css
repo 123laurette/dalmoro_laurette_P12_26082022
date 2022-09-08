@@ -11,8 +11,7 @@
 }
 .pageDashboard{
     width: 86%;
-    height: 800px;
-    margin-top: -44%;
+    margin-top: -800px;
     margin-left: 200px;
 }
 .HorizonGauche {
@@ -25,7 +24,7 @@
     margin-top: 40px;
 }
 .sessions, .performance, .score {
-    width: 300px;
+    width: 28%;
     height: 300px;
     border-radius: 5px;
 }
@@ -72,22 +71,39 @@
     color: #74798c ;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
     .pageDashboard{
-        margin-top: -80%;
-        margin-left: 150px;
+        margin-left: 170px;
     }
+  
     .VerticalDroite {
-        width: 21%;
-        height: 532px;
+        width: 19%;
+        height: 500px;
+    }
+    .activity{
+        height: 255px;
+    }
+    
+    .activityGraph .recharts-responsive-container{
+        border: blue solid;
+        aspect-ratio: 3;
     }
     .Calories, .Proteines, .Glucides, .Lipides {
-        height: 110px;
+    height: 80px;
     }
-    
-    .sessions, .performance, .score {
-        border: blue solid;
-        height: 100%;
+    .Calories img, .Proteines img, .Glucides img, .Lipides img {
+        margin-left: -20px;
+        width: 50px;  
+        height: 50px;
     }
-    
+
+    .Infos{
+        margin-left: 10px;
+    }
+    .Infos h3 {
+        font-size: 15px;
+    }
+    .Infos p {
+        font-size: 12px;
+    }
 }
