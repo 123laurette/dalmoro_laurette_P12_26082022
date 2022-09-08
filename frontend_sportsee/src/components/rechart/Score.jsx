@@ -18,7 +18,7 @@ const ScoreGraph = ({userMain}) => {
 
     return (
       <div className="squareGraph">
-        <ResponsiveContainer  width="100%" aspect={1}>
+        <ResponsiveContainer  width="100%" aspect={1.05}>
 
           <RadialBarChart cx="50%" cy="50%" style={{backgroundColor: "var(--gris)"}} width="100%" height="100%" margin={{ top: 30, right: 30, bottom: 30, left: 30 }} innerRadius={70}  barSize={10} data={data} startAngle={80} endAngle={450} >
             {/*concerne le container*/}

@@ -53,12 +53,11 @@ function nameDay(day){
 const SessionsGraph = ({userSessions}) => {
     return (
         <div className='squareGraph sessionGraph'>
-            <ResponsiveContainer width="100%" aspect={1}>
+            <ResponsiveContainer width="100%" aspect={1.05}>
 
                 <LineChart
                     style={{backgroundColor: "#FF0000"}}
-                    width={258}
-                    height={263}
+
                     data={userSessions}
                     margin={{top: 50, right: -2, left: -60, bottom: 10 }}>    
                     
@@ -72,9 +71,9 @@ const SessionsGraph = ({userSessions}) => {
 
                     <Line type="monotone" dataKey="sessionLength"  stroke="#FFFFFF"dot={false} opacity={0.8} strokeWidth={2}/>
 
-                    <text className='graphTitle' x="12%" y="15%" width={147} height={48}textAnchor="start" dominantBaseline="middle"  fill="#FFFFFF" style={{fontWeight:500, opacity:0.5}} > Durée moyenne des </text>
+                    <text className='graphTitle' x="8%" y="12%" width={147} height={48}  fill="#FFFFFF" style={{fontWeight:500, opacity:0.5}} > Durée moyenne des </text>
                     
-                    <text className='graphTitle' x="12%" y="25%" width={147} height={48}textAnchor="start" dominantBaseline="middle"  fill="#FFFFFF" style={{ fontWeight:500, opacity:0.5}} >
+                    <text className='graphTitle' x="8%" y="20%" width={147} height={48}  fill="#FFFFFF" style={{ fontWeight:500, opacity:0.5}} >
                     sessions</text>
                     
                 </LineChart>

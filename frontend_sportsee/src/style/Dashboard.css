@@ -11,7 +11,7 @@
 }
 .pageDashboard{
     width: 86%;
-    margin-top: -800px;
+    margin-top: -830px;
     margin-left: 200px;
 }
 .HorizonGauche {
@@ -72,14 +72,29 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    .Bonjour h1{
+        font-size: 40px;
+        margin-top: 20px;
+    }
+    .Bonjour p{
+        font-size: 16px;
+    }
     .pageDashboard{
         margin-left: 170px;
     }
+
+tspan{
+    font-size: 12px;
+}
+
+
+
+
+    
     .VerticalDroite {
         width: 19%;
-        height: 500px;
+        height: 493px;
     }
-    
     .Calories, .Proteines, .Glucides, .Lipides {
     height: 80px;
     }
@@ -88,7 +103,6 @@
         width: 50px;  
         height: 50px;
     }
-    
     .Infos{
         margin-left: 10px;
     }

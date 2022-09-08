@@ -27,31 +27,32 @@ const CustomTooltip=({active, payload})=>{
  * @returns component jsx - chart
  */
 
-const ActivityGraph = ({userActivity}) => {
-  return (
-    <div className='activityGraph'>
-
-      <ResponsiveContainer width="100%"  aspect={4} >  
-      
+const ActivityGraph = ({userActivity}) => {   
+   return (
+      <ResponsiveContainer width="100%" height="100%">
         <BarChart
-          width={835}
-          height={320}
+        
           data={userActivity}
-          margin={{top: 80, right: 50, left: 45, bottom: 20,}}
+          margin={{
+            top: 80,
+            right: 50,
+            left: 45,
+            bottom: 20,
+          }}
           barSize={7} //epaisseur de la barre
           barGap={8}  //espace entre chaque barre
         >
-          <CartesianGrid strokeDasharray="3 3" vertical={false} />
+          <CartesianGrid strokeDasharray="1"  vertical={false}/>
 
-          <XAxis dataKey="day"  tickLine={false}  stroke=" #DEDEDE" tick={{fill:"#9B9EAC", fontWeight:500, fontSize:14}} padding={{ left: -47, right: -48 }} tickMargin={16}/> 
+          <XAxis className='activityXAxis'dataKey="day" tickLine={false}  stroke=" #DEDEDE" tick={{fill:"#9B9EAC", fontWeight:500, fontSize:14}} padding={{ left: -47, right: -48 }} tickMargin={16} />
           {/*concerne les dates*/}
 
-          <YAxis  tickLine={false} orientation="right" axisLine={false} tick={{fill:"#9B9EAC", fontWeight:500, fontSize:14}} tickMargin={45} minTickGap={27}/>
+          <YAxis tickLine={false} orientation="right" axisLine={false} tick={{fill:"#9B9EAC", fontWeight:500, fontSize:14}} tickMargin={45} minTickGap={27}/>
           {/*concerne les valeurs y*/}
 
-          <Tooltip content={<CustomTooltip/>} />
+          <Tooltip   content={<CustomTooltip /> } />
 
-          <Legend className='activityLegend' verticalAlign='top' align='right' iconType={"circle"} iconSize={8} width={277} height={25} wrapperStyle={{ top: 35, right: 26 }}  
+          <Legend className='activityLegend' verticalAlign='top' align='right' iconType={"circle"} iconSize={8} width={277} height={25} wrapperStyle={{ top: 35, right: 20 }}  
           formatter={(value) => {
             return <span style={{ color: "#74798C", fontSize:14, fontWeight:500}}>{value}</span>;}}/>
           {/*concerne les légendes*/}
@@ -62,15 +63,12 @@ const ActivityGraph = ({userActivity}) => {
           <Bar dataKey="calories" name="Calories brulées (kCal)" fill="#E60000" />
           {/*concerne les barres des calories*/}
 
-          <text className='graphTitle' x="5%" y="15%" width={147} height={48}textAnchor="start" dominantBaseline="middle"  fill="#20253A" style={{ fontWeight:500}} > Activité quotidienne </text>
+          <text className='graphTitle' x="4%" y="15%" width={147} height={48}   fill="#20253A" style={{ fontWeight:500}} > Activité quotidienne </text>
           {/*concerne le titre*/}
-
+          
         </BarChart>
       </ResponsiveContainer>
-    </div>
-  );
-}
-export default ActivityGraph;
+    );
+  }
+  export default ActivityGraph;
 
-
- 
