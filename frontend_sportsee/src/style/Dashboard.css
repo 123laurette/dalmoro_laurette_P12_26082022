@@ -80,20 +80,18 @@
         font-size: 16px;
     }
     .pageDashboard{
-        margin-left: 170px;
+        margin-left: 160px;
+        width: 83%;
+        margin-top: -700px;
     }
-
-tspan{
-    font-size: 12px;
-}
-
-
-
-
-    
+    .sessions, .performance, .score {
+        width: 31%;
+        height: 170px;
+        border-radius: 5px;
+    }
     .VerticalDroite {
         width: 19%;
-        height: 493px;
+        height: 500px;
     }
     .Calories, .Proteines, .Glucides, .Lipides {
     height: 80px;
@@ -112,4 +110,21 @@ tspan{
     .Infos p {
         font-size: 12px;
     }
+
+    /*CSS Activity et Performance - Responsive 1024/780*/
+    tspan{
+        font-size: 11px;
+    }
+    /*CSS Sessions et Score - Responsive 1024/780*/
+    .graphTitle{
+        font-size: 15px;
+    }
+    /*CSS Score - Responsive 1024/780*/
+    text.scoreSize{
+        font-size: 20px;
+    }
+    text.graphTitle{
+        margin-left: 0px;
+    }
+    
 }

@@ -1,5 +1,6 @@
 import React from 'react';
-import {ResponsiveContainer,LineChart,Line,XAxis,YAxis,CartesianGrid,Tooltip,Rectangle} from "recharts"; 
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,  ResponsiveContainer, Rectangle } from 'recharts';
+
 
 /**
  * @param {boolean}  [Props.active='true']
@@ -52,35 +53,35 @@ function nameDay(day){
 
 const SessionsGraph = ({userSessions}) => {
     return (
-        <div className='squareGraph sessionGraph'>
-            <ResponsiveContainer width="100%" aspect={1.05}>
-
-                <LineChart
-                    style={{backgroundColor: "#FF0000"}}
-
-                    data={userSessions}
-                    margin={{top: 50, right: -2, left: -60, bottom: 10 }}>    
+        <ResponsiveContainer>
+            <LineChart style={{backgroundColor: "#FF0000", borderRadius: "5px"}} data={userSessions} margin={{top: 50, right: -2, left: -60, bottom: 10 }}>    
                     
-                    <CartesianGrid  vertical={false} horizontal={false}/>
+                <CartesianGrid  vertical={false} horizontal={false}/>
 
-                    <XAxis dataKey="day"tickFormatter={nameDay} tickLine={false} fillOpacity={0.5} style={{ transform: 'scale(0.9)', transformOrigin: 'bottom' }}tick={{fill:"#FFFFFF",  fontWeight:500, fontSize:12}} tickMargin={10}  axisLine={false} interval="preserveStartEnd"/>
+                <XAxis dataKey="day"tickFormatter={nameDay} tickLine={false} fillOpacity={0.5} style={{ transform: 'scale(0.9)', transformOrigin: 'bottom' }}tick={{fill:"#FFFFFF",  fontWeight:500, fontSize:12}} tickMargin={10}  axisLine={false} interval="preserveStartEnd"/>
+        
+                <YAxis axisLine={false} tickLine={false} tick={false} domain={['dataMin - 5', 'dataMax + 5']}/>         
+                <Tooltip  content={<CustomTooltip/>} cursor={<CustomCursor/>} 
+                    wrapperStyle={{
+                        background: "#FFFFFF",
+                        textAlign: "center",
+                        color: "#000000",
+                        width: "55px",
+                        height: "25px",
+                        outline: "none",
+                        marginTop: "15"
+                    }}
+                />          
 
-                    <YAxis axisLine={false} tickLine={false} tick={false} domain={['dataMin - 5', 'dataMax + 5']}/>
+                <Line  type="natural" dataKey="sessionLength" dot={false} activeDot={{ stroke: "red", strokeWidth: 2, r: 5 }}stroke={"#FFF"}/>
 
-                    <Tooltip  content={<CustomTooltip/>} cursor={<CustomCursor/>}/>
-
-                    <Line type="monotone" dataKey="sessionLength"  stroke="#FFFFFF"dot={false} opacity={0.8} strokeWidth={2}/>
-
-                    <text className='graphTitle' x="8%" y="12%" width={147} height={48}  fill="#FFFFFF" style={{fontWeight:500, opacity:0.5}} > Durée moyenne des </text>
+                <text className='graphTitle' x="8%" y="12%" width={147} height={48}  fill="#FFFFFF" style={{fontWeight:500, opacity:0.5}} > Durée moyenne des </text>
                     
-                    <text className='graphTitle' x="8%" y="20%" width={147} height={48}  fill="#FFFFFF" style={{ fontWeight:500, opacity:0.5}} >
-                    sessions</text>
-                    
-                </LineChart>
-            </ResponsiveContainer>
-        </div>
+                <text className='graphTitle' x="8%" y="20%" width={147} height={48}  fill="#FFFFFF" style={{ fontWeight:500, opacity:0.5}} >  sessions</text>
+
+            </LineChart>
+        </ResponsiveContainer>
     );
-};
+}
 
 export default SessionsGraph;
-

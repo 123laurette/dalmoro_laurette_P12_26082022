@@ -50,7 +50,18 @@ const ActivityGraph = ({userActivity}) => {
           <YAxis tickLine={false} orientation="right" axisLine={false} tick={{fill:"#9B9EAC", fontWeight:500, fontSize:14}} tickMargin={45} minTickGap={27}/>
           {/*concerne les valeurs y*/}
 
-          <Tooltip   content={<CustomTooltip /> } />
+          <Tooltip   content={<CustomTooltip /> }  
+            wrapperStyle={{
+              color: "#FFF",
+              background: "red",
+              border: "none",
+              outline: "none",
+              width: "70px",
+              height: "85px",
+              textAlign: "center",
+              lineHeight: "2.5",
+            }}
+          />
 
           <Legend className='activityLegend' verticalAlign='top' align='right' iconType={"circle"} iconSize={8} width={277} height={25} wrapperStyle={{ top: 35, right: 20 }}  
           formatter={(value) => {
@@ -70,5 +81,6 @@ const ActivityGraph = ({userActivity}) => {
       </ResponsiveContainer>
     );
   }
+
   export default ActivityGraph;
 

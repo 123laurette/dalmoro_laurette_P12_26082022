@@ -26,14 +26,13 @@ function namePerf(kind){
 
 const PerformanceGraph = ({userPerformance}) => {
     return (
-        <div className="squareGraph performGraph">
-            <ResponsiveContainer   width="100%" aspect={1.05} >
+            <ResponsiveContainer   >
                 
-                <RadarChart margin={{ top: 30, right: 30, bottom: 30, left: 30 }} style={{backgroundColor: "#282D30"}}  data={userPerformance} >
+                <RadarChart margin={{ top: 30, right: 30, bottom: 30, left: 70 }} style={{backgroundColor: "#282D30",borderRadius: "5px"}}  data={userPerformance} >
 
                     <PolarGrid radialLines={false} />
 
-                    <PolarAngleAxis dataKey="kind" tickFormatter={namePerf} tickLine={false} axisLine={false} dy={5} stroke="#FFF" tick={{fill:"#FFFFFF",fontSize:12}}/>
+                    <PolarAngleAxis dataKey="kind" tickFormatter={namePerf} tickLine={false} axisLine={false} dy={5} stroke="#FFF" tick={{fill:"#FFFFFF",fontSize:12}}  />
 
                     <PolarRadiusAxis tick={false} tickCount={6} axisLine={false} />
 
@@ -41,7 +40,6 @@ const PerformanceGraph = ({userPerformance}) => {
 
                 </RadarChart>
             </ResponsiveContainer>
-        </div>
     );
 };
 
