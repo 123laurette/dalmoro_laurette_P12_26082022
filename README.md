@@ -1,11 +1,11 @@
-            [![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
-            [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
-            [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 
 
 
-            ![Cover](https://github.com/123laurette/dalmoro_laurette_P12_26082022/blob/master/frontend_sportsee/src/assets/logo.png)
+![logo sportsee](https://github.com/123laurette/dalmoro_laurette_P12_26082022/blob/master/frontend_sportsee/src/assets/logo.png)
 
 
 
