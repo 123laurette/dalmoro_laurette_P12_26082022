@@ -14,8 +14,8 @@ import copy from "./../../assets/Copiryght, SportSee 2020.png"
 
 function NavVertical () {
     return (
-        <div className="Vertical">
-            <section className="NavIcone">
+        <div className="vertical">
+            <section className="navIcone">
                 <img src={iconePersonne} alt="représente une personne" />
                 <img src={iconeNage} alt="représente une personne qui nage" />
                 <img src={iconeVelo} alt="représente une personne en vélo" />

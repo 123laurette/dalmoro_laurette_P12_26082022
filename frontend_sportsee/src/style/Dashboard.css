@@ -1,12 +1,12 @@
-.Bonjour h1{
+.bonjour h1{
     font-size: 48px;
     margin-bottom: 12px;
     margin-top: 0px;
 }
-.Bonjour p{
+.bonjour p{
     font-size: 18px;
 }
-.Bonjour span {
+.bonjour span {
     color: #ff0000;
 }
 .pageDashboard{
@@ -14,7 +14,7 @@
     margin-top: -830px;
     margin-left: 200px;
 }
-.HorizonGauche {
+.horizonGauche {
     width: 70%;
 }
 .activity{
@@ -37,7 +37,7 @@
     margin-top: 30px;
     width: 100%;
 }
-.Calories, .Proteines, .Glucides, .Lipides {
+.calories, .proteines, .glucides, .lipides {
     display: flex;
     align-items: center;
     padding-left: 40px;
@@ -47,12 +47,12 @@
     border-radius: 5px;
 }
 
-.Calories img, .Proteines img, .Glucides img, .Lipides img {
+.calories img, .proteines img, .glucides img, .lipides img {
     width: 80px;
     height: 80px;
     margin-left: 50px;
 }
-.VerticalDroite{
+.verticalDroite{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -64,19 +64,19 @@
 .graphiques{
     display: flex;
 }
-.Infos {
+.infos {
     margin-left: 50px;
 }
-.Infos p {
+.infos p {
     color: #74798c ;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1300px) {
-    .Bonjour h1{
+    .bonjour h1{
         font-size: 40px;
         margin-top: 20px;
     }
-    .Bonjour p{
+    .bonjour p{
         font-size: 16px;
     }
     .pageDashboard{
@@ -89,25 +89,25 @@
         height: 170px;
         border-radius: 5px;
     }
-    .VerticalDroite {
+    .verticalDroite {
         width: 19%;
         height: 500px;
     }
-    .Calories, .Proteines, .Glucides, .Lipides {
+    .calories, .proteines, .glucides, .lipides {
     height: 80px;
     }
-    .Calories img, .Proteines img, .Glucides img, .Lipides img {
+    .calories img, .proteines img, .glucides img, .lipides img {
         margin-left: -20px;
         width: 50px;  
         height: 50px;
     }
-    .Infos{
+    .infos{
         margin-left: 10px;
     }
-    .Infos h3 {
+    .infos h3 {
         font-size: 15px;
     }
-    .Infos p {
+    .infos p {
         font-size: 12px;
     }
 

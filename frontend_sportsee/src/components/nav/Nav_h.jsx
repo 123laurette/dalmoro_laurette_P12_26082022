@@ -9,7 +9,7 @@ import logo from "./../../assets/logo.png"
  */
 function NavHorizon (){
     return (
-        <div className="Horizon">
+        <div className="horizon">
             <header>
                 <img src={logo} alt="logo SportSee" />
                 <nav>

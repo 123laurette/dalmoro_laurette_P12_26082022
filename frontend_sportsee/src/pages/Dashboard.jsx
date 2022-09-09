@@ -60,7 +60,7 @@ function Dashboard() {
     return (
         <div className="pageDashboard">
 
-            <div className="Bonjour">
+            <div className="bonjour">
                 <h1>Bonjour {""} 
                     <span>{userMain.firstName}</span> 
                 </h1>
@@ -68,7 +68,7 @@ function Dashboard() {
             </div>
 
             <div className="graphiques">
-                <section className="HorizonGauche">
+                <section className="horizonGauche">
                     <div className="activity">
                         <Activity userActivity={userActivity.sessions}/>
                     </div>
@@ -88,32 +88,32 @@ function Dashboard() {
 
                     </div>
                 </section>
-                <section className="VerticalDroite">
+                <section className="verticalDroite">
 
-                    <div className="Calories">
+                    <div className="calories">
                         <img src={Calories} alt="" />
-                        <div className="Infos">
+                        <div className="infos">
                             <h3>{userMain.calorie}kCal</h3>
                             <p>Calories</p>
                         </div>
                     </div>
-                    <div className="Proteines">
+                    <div className="proteines">
                         <img src={Proteines} alt="" />
-                        <div className="Infos">
+                        <div className="infos">
                             <h3>{userMain.proteine}g</h3>
                             <p>Proteines</p>
                         </div>
                     </div>
-                    <div className="Glucides">
+                    <div className="glucides">
                         <img src={Glucides} alt="" />
-                        <div className="Infos">
+                        <div className="infos">
                             <h3>{userMain.glucide}g</h3>
                             <p>Glucides</p>
                         </div>
                     </div>
-                    <div className="Lipides">
+                    <div className="lipides">
                         <img src={Lipides} alt="" />
-                        <div className="Infos">
+                        <div className="infos">
                             <h3>{userMain.lipide}g</h3>
                             <p>Lipides</p>
                         </div>
