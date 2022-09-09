@@ -2,12 +2,18 @@
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
+
+
+
 ![Cover](https://github.com/123laurette/dalmoro_laurette_P12_26082022/blob/master/frontend_sportsee/src/assets/logo.png)
 
-#Presentation
+
+
+
+# Presentation
 SportSee project is an application for sportive people that want to follow their daily progress through analytics dashboard.
 
-#Prerequisites
+# Prerequisites
 NodeJS (v16.17.0)
 NPM (8.15.0)
 Yarn (1.22.19)
@@ -16,32 +22,32 @@ React Router Dom (v6.3.0)
 Recharts (v2.1.13)
 
 
-##Installing the app
+## Installing the app
 Forke and clone the repository : https://github.com/123laurette/dalmoro_laurette_P12_26082022.git
 
 Run the yarn command will allow you to install the dependencies
 
-###Backend 
+### Backend 
     Open a new terminal and run cd BackEnd command, then run yarn devcommand the backend will open http://localhost:3000
 
-###FrontEnd
+### FrontEnd
     Open a new terminal and run cd frontend_sportsee, then run the npm start command will allow you to run the application on http://localhost:3001
 
 
 Getting Started with Create React App
 This project was bootstrapped with Create React App.
 
-###To display a user's data :
+### To display a user's data :
 -Go to the Dashboard.jsx file in the frontend_sportsee/src/pages folder
 -Uncomment the dataUser you want to use (fetchMock or fetchApi)
 - Follow the instuctions below
 
-#NOTA : 4 users have been created
+# NOTA : 4 users have been created
     fetchMock = id 22 and 28
     fetckApi = id 12 and 18
 
 
-#Author
+### Author
 laurette DAL MORO
 
 ### Possible endpoints
