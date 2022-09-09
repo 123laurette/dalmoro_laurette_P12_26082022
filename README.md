@@ -1,48 +1,48 @@
-[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+            [![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](https://forthebadge.com)
+            [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+            [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 
 
 
-![Cover](https://github.com/123laurette/dalmoro_laurette_P12_26082022/blob/master/frontend_sportsee/src/assets/logo.png)
+            ![Cover](https://github.com/123laurette/dalmoro_laurette_P12_26082022/blob/master/frontend_sportsee/src/assets/logo.png)
 
 
 
 
-# Presentation
+## Presentation
 SportSee project is an application for sportive people that want to follow their daily progress through analytics dashboard.
 
-# Prerequisites
-NodeJS (v16.17.0)
-NPM (8.15.0)
-Yarn (1.22.19)
-React (v18.2.0) 
-React Router Dom (v6.3.0)
-Recharts (v2.1.13)
+## Prerequisites
+NodeJS (v16.17.0)  
+NPM (8.15.0)  
+Yarn (1.22.19)  
+React (v18.2.0)   
+React Router Dom (v6.3.0)  
+Recharts (v2.1.13)  
 
 
 ## Installing the app
 Forke and clone the repository : https://github.com/123laurette/dalmoro_laurette_P12_26082022.git
 
-Run the yarn command will allow you to install the dependencies
-
 ### Backend 
-    Open a new terminal and run cd BackEnd command, then run yarn devcommand the backend will open http://localhost:3000
+    Open a new terminal and run cd BackEnd command  
+    Then run yarn devcommand the backend will open http://localhost:3000
 
 ### FrontEnd
-    Open a new terminal and run cd frontend_sportsee, then run the npm start command will allow you to run the application on http://localhost:3001
+    Open a new terminal and run cd frontend_sportsee  
+    Then run the npm start command will allow you to run the application on http://localhost:3001
 
 
-Getting Started with Create React App
+Getting Started with Create React App  
 This project was bootstrapped with Create React App.
 
 ### To display a user's data :
--Go to the Dashboard.jsx file in the frontend_sportsee/src/pages folder
--Uncomment the dataUser you want to use (fetchMock or fetchApi)
+- Go to the Dashboard.jsx file in the frontend_sportsee/src/pages folder  
+- Uncomment the dataUser you want to use (fetchMock or fetchApi)  
 - Follow the instuctions below
 
-# NOTA : 4 users have been created
+## NOTA : 4 users have been created
     fetchMock = id 22 and 28
     fetckApi = id 12 and 18
 
@@ -59,7 +59,7 @@ This project includes four endpoints that you will be able to use:
 - `http://localhost:3000/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
 - `http://localhost:3000/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
 
-### 4.2 Examples of queries
+### Examples of queries
 
 - `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
 - `http://localhost:3000/user/18` - Retrieves user 18's main information.
