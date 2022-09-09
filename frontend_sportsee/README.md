@@ -2,74 +2,58 @@
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
+![Cover](https://github.com/123laurette/dalmoro_laurette_P12_26082022/blob/master/frontend_sportsee/src/assets/logo.png)
 
-# Getting Started with Create React App
+#Presentation
+SportSee project is an application for sportive people that want to follow their daily progress through analytics dashboard.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Prerequisites
+NodeJS (v16.17.0)
+NPM (8.15.0)
+Yarn (1.22.19)
+React (v18.2.0) 
+React Router Dom (v6.3.0)
+Recharts (v2.1.13)
 
-## Available Scripts
 
-In the project directory, you can run:
+##Installing the app
+Forke and clone the repository : https://github.com/123laurette/dalmoro_laurette_P12_26082022.git
 
-### `npm start`
+Run the yarn command will allow you to install the dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+###Backend 
+    Open a new terminal and run cd BackEnd command, then run yarn devcommand the backend will open http://localhost:3000
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+###FrontEnd
+    Open a new terminal and run cd frontend_sportsee, then run the npm start command will allow you to run the application on http://localhost:3001
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Getting Started with Create React App
+This project was bootstrapped with Create React App.
 
-### `npm run build`
+###To display a user's data :
+-Go to the Dashboard.jsx file in the frontend_sportsee/src/pages folder
+-Uncomment the dataUser you want to use (fetchMock or fetchApi)
+- Follow the instuctions below
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#NOTA : 4 users have been created
+    fetchMock = id 22 and 28
+    fetckApi = id 12 and 18
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#Author
+laurette DAL MORO
 
-### `npm run eject`
+### Possible endpoints
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project includes four endpoints that you will be able to use:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `http://localhost:3000/user/${userId}` - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
+- `http://localhost:3000/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
+- `http://localhost:3000/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
+- `http://localhost:3000/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4.2 Examples of queries
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
+- `http://localhost:3000/user/18` - Retrieves user 18's main information.
