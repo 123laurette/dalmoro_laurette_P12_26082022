@@ -19,7 +19,7 @@ import dataUser from "../services/fetch/fetchMock"
 
 function Dashboard() {
     const {id} = useParams()
-    const{categorie} = useParams()
+    const {categorie} = useParams()
     const navigate = useNavigate()
     const [userMain, setUserMain] = useState()
     const [userActivity, setUserActivity] = useState()
@@ -28,7 +28,7 @@ function Dashboard() {
 
     
     useEffect(() => {
-        dataUser(id, categorie)
+        dataUser(id,categorie)
 
             .then(data => {
                 if (typeof data !== "undefined") {
@@ -52,7 +52,7 @@ function Dashboard() {
 
             .catch(error => console.log("erreur données id", error))
     },
-    [id, categorie,navigate])
+    [id, categorie, navigate])
     
     if (!userMain || !userActivity || !userSessions || !userPerformance) {
         return null
@@ -75,7 +75,7 @@ function Dashboard() {
                     </div>
                     <div className="carre">
 
-                        <div className="averageSessions">
+                        <div className="sessions">
                             <Sessions userSessions={userSessions.sessions}/>
                         </div>
 
