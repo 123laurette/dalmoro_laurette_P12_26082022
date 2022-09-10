@@ -9,8 +9,8 @@ import Activity from "./../components/rechart/Activity"
 import Sessions from "./../components/rechart/Sessions"
 import Performance from "./../components/rechart/Performance"
 import Score from "../components/rechart/Score"
-import dataUser from "../services/fetch/fetchMock"
-//import dataUser from "../services/fetch/fetchApi.js"
+//import dataUser from "../services/fetch/fetchMock"
+import dataUser from "../services/fetch/fetchApi.js"
 
 /**
  * 
@@ -19,6 +19,7 @@ import dataUser from "../services/fetch/fetchMock"
 
 function Dashboard() {
     const {id} = useParams()
+    const{categorie} = useParams()
     const navigate = useNavigate()
     const [userMain, setUserMain] = useState()
     const [userActivity, setUserActivity] = useState()
@@ -27,7 +28,7 @@ function Dashboard() {
 
     
     useEffect(() => {
-        dataUser(id)
+        dataUser(id, categorie)
 
             .then(data => {
                 if (typeof data !== "undefined") {
@@ -51,7 +52,7 @@ function Dashboard() {
 
             .catch(error => console.log("erreur données id", error))
     },
-    [id, navigate])
+    [id, categorie,navigate])
     
     if (!userMain || !userActivity || !userSessions || !userPerformance) {
         return null
@@ -74,7 +75,7 @@ function Dashboard() {
                     </div>
                     <div className="carre">
 
-                        <div className="sessions">
+                        <div className="averageSessions">
                             <Sessions userSessions={userSessions.sessions}/>
                         </div>
 

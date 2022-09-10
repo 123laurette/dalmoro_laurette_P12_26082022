@@ -7,6 +7,6 @@ const handleNoUserData = (res, userData) => {
     return res.json({data: userData})
 }
 
-export default {
+module.exports = {
     handleNoUserData
 }

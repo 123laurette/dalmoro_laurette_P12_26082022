@@ -1,11 +1,18 @@
-import { Router } from 'express'
-import idx from 'idx'
+const express = require('express')
+const idx = require('idx')
 
-const router = Router()
+const router = express.Router()
 
-import { getUserById, getUserActivityById, getUserAverageSession, getUserPerformance } from './models'
+const {
+    getUserById,
+    getUserActivityById,
+    getUserAverageSession,
+    getUserPerformance
+} = require('./models')
 
-import { handleNoUserData } from './middleware'
+const {
+    handleNoUserData
+} = require('./middleware')
 
 
 router.get('/user/:id', (req, res) => {
@@ -40,4 +47,4 @@ router.get('/user/:id/performance', (req, res) => {
 })
 
 
-export default router
+module.exports = router
