@@ -6,6 +6,7 @@ import './index.css';
 import NavH from "./components/nav/Nav_h"
 import NavV from "./components/nav/Nav_v"
 import Dashboard from "./pages/Dashboard"
+import Page404 from "./pages/Page404"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <NavV />
       <Routes>
         <Route path="/user/:id" element={<Dashboard />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
   </BrowserRouter>  
 

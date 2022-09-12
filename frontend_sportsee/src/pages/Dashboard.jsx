@@ -9,6 +9,7 @@ import Activity from "./../components/rechart/Activity"
 import Sessions from "./../components/rechart/Sessions"
 import Performance from "./../components/rechart/Performance"
 import Score from "../components/rechart/Score"
+import Page404 from "./Page404"
 import dataUser from "../services/fetch/fetchMock"
 //import dataUser from "../services/fetch/fetchApi.js"
 
@@ -50,13 +51,14 @@ function Dashboard() {
                 }
             })
 
-            .catch(error => console.log("erreur données id", error))
+            .catch(<Page404 />)
     },
     [id, categorie, navigate])
     
     if (!userMain || !userActivity || !userSessions || !userPerformance) {
-        return null
-    }
+        return  (<Page404 />)   
+
+    }else{
 
     return (
         <div className="pageDashboard">
@@ -123,6 +125,7 @@ function Dashboard() {
             </div>
         </div>
     );
+    }
 };
 
 export default Dashboard;
