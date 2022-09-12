@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
+//@ts-check
 /**
  * 
  * @param {boolean}  [Props.active='true']
@@ -28,7 +28,7 @@ const CustomTooltip=({active, payload})=>{
  */
 
 const ActivityGraph = ({userActivity}) => {   
-   return (
+    return (
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
         
