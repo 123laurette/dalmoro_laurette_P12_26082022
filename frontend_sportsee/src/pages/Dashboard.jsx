@@ -11,9 +11,7 @@ import Performance from "./../components/rechart/Performance"
 import Score from "../components/rechart/Score"
 import dataUser from "../services/fetch/fetchMock"
 //import dataUser from "../services/fetch/fetchApi.js"
-/**
- * @returns Dashboard include components
- */
+
 /**
  * 
  * @returns Dashboard include components

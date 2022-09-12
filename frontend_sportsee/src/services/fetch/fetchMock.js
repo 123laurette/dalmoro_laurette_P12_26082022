@@ -35,8 +35,6 @@ function getUserPerformance(id) {
  * @param {number} id 
  * @param {string} categorie 
  * @returns function (id, categorie)
-    
- }}
  */
 const getData = async (id, categorie) => {
     switch (categorie) {

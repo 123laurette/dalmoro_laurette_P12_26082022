@@ -5,6 +5,7 @@
       "excludePattern": "(node_modules/|docs/|public)"
     },
     "plugins": ["plugins/markdown"],
+    "recurseDepth": 10,
     "templates": {
       "cleverLinks": true,
       "monospaceLinks": true
