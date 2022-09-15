@@ -1,4 +1,6 @@
+import {mainData, activityData, averageSessionsData, performanceData} from "../ClassModelisation"
 const url = "http://localhost:3000/user";
+
 console.log (url)
 
 const getData = async (id, categorie) => {
@@ -11,7 +13,12 @@ const getData = async (id, categorie) => {
     const dataFetch = await data.json();
     console.log(dataFetch)
     
-    return dataFetch;
-}
+    switch (categorie) {
+        case "activity": return new activityData(dataFetch.data);
+        case "average-sessions": return new  averageSessionsData(dataFetch.data);
+        case "performance": return new performanceData(dataFetch.data);
+
+        default: return new mainData(dataFetch.data);
+    }}
 
 export default getData

@@ -11,9 +11,8 @@ import Performance from "./../components/rechart/Performance"
 import Score from "../components/rechart/Score"
 import dataUser from "../services/fetch/fetchMock"
 //import dataUser from "../services/fetch/fetchApi.js"
-/**
- * @returns Dashboard include components
- */
+
+
 /**
  * 
  * @returns Dashboard include components
@@ -40,7 +39,7 @@ function Dashboard() {
                     .then(data => setUserActivity(data))
                     .catch(error => console.log("erreur activity",error))
 
-                    dataUser(id, "sessions")
+                    dataUser(id, "average-sessions")
                     .then(data => setUserSessions(data))
                     .catch(error => console.log("erreur sessions", error))
 
