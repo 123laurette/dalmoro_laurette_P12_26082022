@@ -26,7 +26,7 @@ Recharts (v2.1.13)
 Forke and clone the repository : https://github.com/123laurette/dalmoro_laurette_P12_26082022.git
 
 ### Backend 
-    Open a new terminal and run cd BackEnd command  
+    Open a new terminal and run cd Backend command  
     Then run yarn devcommand the backend will open http://localhost:3000
 
 ### FrontEnd
