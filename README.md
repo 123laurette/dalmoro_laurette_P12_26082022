@@ -27,7 +27,7 @@ Forke and clone the repository : https://github.com/123laurette/dalmoro_laurette
 
 ### Backend 
     Open a new terminal and run cd Backend command  
-    Then run yarn devcommand the backend will open http://localhost:3000
+    Then run the yarn run dev command the backend will open http://localhost:3000
 
 ### FrontEnd
     Open a new terminal and run cd frontend_sportsee  
