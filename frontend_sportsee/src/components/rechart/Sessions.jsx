@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,  ResponsiveContainer, Rectangle } from 'recharts';
+import PropTypes from 'prop-types'
 
 
 /**
@@ -85,3 +86,8 @@ const SessionsGraph = ({userSessions}) => {
 }
 
 export default SessionsGraph;
+
+//Proptypes
+SessionsGraph.propTypes = {
+    userSessions: PropTypes.array.isRequired
+}

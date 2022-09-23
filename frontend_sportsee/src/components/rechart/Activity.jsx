@@ -1,5 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types'
+
 //@ts-check
 /**
  * 
@@ -83,4 +85,10 @@ const ActivityGraph = ({userActivity}) => {
   }
 
   export default ActivityGraph;
+
+
+  //Proptypes
+  ActivityGraph.propTypes = {
+    userActivity: PropTypes.array.isRequired
+}
 

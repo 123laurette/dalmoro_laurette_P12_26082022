@@ -3,6 +3,14 @@ const url = "http://localhost:3000/user";
 
 console.log (url)
 
+
+/**
+ * retrieve data 
+ * @param {number} id 
+ * @param {string} categorie 
+ * @returns promise
+ */
+
 const getData = async (id, categorie) => {
     let urlDemande = categorie ? url + `/${id}/${categorie}/` : url+ `/${id}/`;
     console.log (urlDemande)

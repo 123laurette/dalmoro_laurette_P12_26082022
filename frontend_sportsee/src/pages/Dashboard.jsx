@@ -12,9 +12,10 @@ import Score from "../components/rechart/Score"
 import dataUser from "../services/fetch/fetchMock"
 //import dataUser from "../services/fetch/fetchApi.js"
 
-
 /**
- * 
+ * @param {number} id 
+ * @param {string} categorie 
+ * @returns promise
  * @returns Dashboard include components
  */
 

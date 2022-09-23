@@ -1,5 +1,7 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer} from 'recharts';
+import PropTypes from 'prop-types'
+
 
 /**
  * Name the different performance categories
@@ -44,3 +46,8 @@ const PerformanceGraph = ({userPerformance}) => {
 };
 
 export default PerformanceGraph;
+
+//Proptypes
+PerformanceGraph.propTypes = {
+    userPerformance: PropTypes.array.isRequired
+}

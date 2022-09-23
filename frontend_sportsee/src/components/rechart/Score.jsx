@@ -1,5 +1,6 @@
 import React from 'react';
 import { RadialBarChart, RadialBar,  ResponsiveContainer, PolarAngleAxis } from 'recharts';
+import PropTypes from 'prop-types'
 
 /**
  * Display of a user's score as a percentage
@@ -44,3 +45,8 @@ const ScoreGraph = ({userMain}) => {
 };
 
 export default ScoreGraph;
+
+//Proptypes
+ScoreGraph.propTypes = {
+  userMain: PropTypes.number.isRequired
+}
