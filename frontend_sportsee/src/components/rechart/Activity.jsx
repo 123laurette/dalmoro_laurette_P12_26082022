@@ -68,10 +68,10 @@ const ActivityGraph = ({userActivity}) => {
             return <span style={{ color: "#74798C", fontSize:14, fontWeight:500}}>{value}</span>;}}/>
           {/*concerne les légendes*/}
 
-          <Bar dataKey="kilogram" name="Poids (kg)"fill="#282D30" />
+          <Bar dataKey="kilogram" name="Poids (kg)"fill="#282D30" radius={[3, 3, 0, 0]} />
           {/*concerne les barres des kilos*/}
 
-          <Bar dataKey="calories" name="Calories brulées (kCal)" fill="#E60000" />
+          <Bar dataKey="calories" name="Calories brulées (kCal)" fill="#E60000" radius={[3, 3, 0, 0]}/>
           {/*concerne les barres des calories*/}
 
           <text className='graphTitle' x="4%" y="15%" width={147} height={48}   fill="#20253A" style={{ fontWeight:500}} > Activité quotidienne </text>
