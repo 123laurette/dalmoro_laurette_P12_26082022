@@ -21,6 +21,8 @@ React (v18.2.0)
 React Router Dom (v6.3.0)  
 Recharts (v2.1.13)  
 
+Run the yarn command will allow you to install the dependencies
+npm install or yarn install
 
 ## Installing the app
 Forke and clone the repository : https://github.com/123laurette/dalmoro_laurette_P12_26082022.git
